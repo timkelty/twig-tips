@@ -8,6 +8,8 @@ https://craftcms.com/docs/3.x/dev/twig-primer.html
 
 ## Tip #2: Use the `url()` function.
 
+https://craftcms.com/docs/3.x/dev/functions.html#url
+
 ```
 <a href="/resources/?category={{ category.id }}">Category Link</a>
 ```
@@ -20,7 +22,15 @@ Becomes...
 
 ## Tip #3: Use the `svg()` function.
 
-TODO: Rob
+https://craftcms.com/docs/3.x/dev/functions.html#svg
+
+```
+{{ svg('@webroot/icons/lemon.svg')|attr({ class: 'w-4 h-4' }) }}
+
+{% for asset in craft.assets.filename('lemon.svg').limit(1).all() %}
+    {{ svg(asset)|attr({ class: 'w-4 h-4' }) }}
+{% endfor %}
+```
 
 ## Tip #4: Many ways to skin a concat.
 
