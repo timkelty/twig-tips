@@ -1,0 +1,19 @@
+- BOth
+- use em!
+- can start includes
+  - making a button that accepts text, later want block
+- blocks are awesome
+  - parent()
+- use to separate logic/view
+  - paddling pdp
+- dscout/industries/entry
+- declarations at top
+  - Stop this: `{% if entry is defined and entry[‘hero’] is defined and entry.hero %}`
+  - understand how ??, |default, is defined
+  - making tailwind preset object
+- dscout/industries/entry
+- avoid passing elements (rob)
+- only
+- argument against macros (except in same template)
+- embeds - favor clarity over cuteness/configurabiltiy
+  - eg jsut make anotehr embed vs super configurable
