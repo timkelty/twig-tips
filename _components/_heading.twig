@@ -11,11 +11,11 @@
 		tag: 'h2', // Defaults to a div
 		preset: 'serif-xl', // Defaults to 'display-7xl'
 	} only %}
-        {% block main %}
-            {{ svg('@webroot/icons/lemon.svg')|attr({ class: 'w-4 h-4' }) }}
-            What’s New
-        {% endblock %}
-    {% endembed %}
+		{% block main %}
+			{{ svg('@webroot/icons/lemon.svg')|attr({ class: 'w-4 h-4' }) }}
+			What’s New
+		{% endblock %}
+	{% endembed %}
 #}
 
 {% set text = text ?? 'Lorem Ipsum Dolor Sit Amet' %}
