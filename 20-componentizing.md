@@ -2,13 +2,9 @@
 
 A component can be anything you find yourself repeating across the site.
 
-That said, don't make components until you find yourself repeating some DOM structure.
+That said, don't make components until you find yourself repeating something.
 
-Embeds aren't just for big structures, like a wrapper for your content + sidebar layout. (show example)
-
-They can be used for any component that you want to pass another component or bit of html too. (show example)
-
-Walk through the component improvements file. Still needs added by Rob.
+https://tailwindcss.com/docs/extracting-components#extracting-html-components
 
 ![](resources/nope.jpg)
 
@@ -20,19 +16,14 @@ Walk through the component improvements file. Still needs added by Rob.
     limit: 10,
 }).all() %}
     <div>
-        {% include "_components/card" %}
+        <!-- Card -->
+        <div>
+            {% for asset in entry.listingImage.limit(1).all() %}
+                <img src="{{ asset.url }}" alt="">
+            {% endfor %}
+            <h3>{{ entry.title }}</h3>
+            {{ entry.description }}
+        </div>
     </div>
 {% endfor %}
-```
-
-```twig
-{# _components/card.twig #}
-
-<div>
-    {% for asset in entry.listingImage.limit(1).all() %}
-        <img src="{{ asset.url }}" alt="">
-    {% endfor %}
-    <h3>{{ entry.title }}</h3>
-    {{ entry.description }}
-</div>
 ```
