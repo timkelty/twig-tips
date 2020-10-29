@@ -1,3 +1,5 @@
+## Improving a component.
+
 ```
 {# _news/index.twig #}
 
@@ -156,7 +158,7 @@ It also provides more clarity and a little separation between data and markup.
 
 ---
 
-## Improvement #4: Survive and thrive.
+## Improvement #4: Make your include an embed, if needed.
 
 Right before launch, the client request a new card layout that re-uses everything except the heading style?
 

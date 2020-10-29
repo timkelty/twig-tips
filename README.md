@@ -65,7 +65,23 @@ https://nystudio107.com/docs/seomatic/Using.html#helper-functions-seomatic-helpe
 
 ## Tip #7: UUID for when your component needs a unique ID.
 
-TODO: Rob
+```
+{% set uuid = create('craft\\helpers\\StringHelper').UUID() %}
+
+<div class="tabs">
+    <ul>
+        {% for i in 0..3 %}
+            <li><a href="#tab-{{ loop.index }}-{{ uuid }}">Tab 1</a></li>
+        {% endfor %}
+    </ul>
+    {% for i in 0..3 %}
+        <div id="tab-{{ loop.index }}-{{ uuid }}">
+        </div>
+    {% endfor %}
+</div>
+```
+
+You can also take advantage of the `namespace` tag and `|namespaceInputId` filter here.
 
 ## Tip #8: Use `attr` and `tag`.
 
@@ -102,10 +118,12 @@ TODO: Tim
 
 A component can be anything you find yourself repeating across the site.
 
-That said, don't make components until you find yourself repeating some DOM structure.
+That said, don't make components until you find yourself repeating something.
 
-Embeds aren't just for big structures, like a wrapper for your content + sidebar layout. (show example)
+https://tailwindcss.com/docs/extracting-components#extracting-html-components
 
-They can be used for any component that you want to pass another component or bit of html too. (show example)
+Walk through the component improvements example. [Component Improvements](component-improvements.md)
 
-Walk through the component improvements file. Still needs added by Rob.
+Embeds rock. They are for big structures: [Content w/ Sidebar](_components/_content-w-sidebar.twig)
+
+They can be used for small components too: [Heading](_components/_heading.twig)

@@ -1,0 +1,42 @@
+{#
+	--- Example Usage ---
+
+	{% include '_components/_atoms/_heading' with {
+		text: 'What’s New', // Default to lorem ipsum
+		tag: 'h2', // Defaults to a div
+		preset: 'serif-xl', // Defaults to 'display-7xl'
+	} only %}
+
+	{% embed '_components/_atoms/_heading' with {
+		tag: 'h2', // Defaults to a div
+		preset: 'serif-xl', // Defaults to 'display-7xl'
+	} only %}
+        {% block main %}
+            {{ svg('@webroot/icons/lemon.svg')|attr({ class: 'w-4 h-4' }) }}
+            What’s New
+        {% endblock %}
+    {% endembed %}
+#}
+
+{% set text = text ?? 'Lorem Ipsum Dolor Sit Amet' %}
+{% set tag = tag ?? 'div' %}
+{% set preset = preset ?? 'display-7xl' %}
+
+{% set presets = {
+	'display-7xl': 'font-display text-42px md:text-7xl uppercase leading-cramped',
+	'display-4xl': 'font-display text-4xl uppercase leading-none',
+	'display-lg': 'font-display text-lg uppercase leading-none',
+	'display-sm': 'font-display text-sm uppercase leading-tightest tracking-wider',
+	'serif-3xl': 'font-serif font-bold text-3xl leading-tighter tracking-tight',
+	'serif-xl': 'font-serif font-bold text-xl leading-tightest tracking-tight',
+} %}
+
+{% set attrs = {
+	class: presets[preset],
+}|merge(attrs ?? {}) %}
+
+<{{ tag }} {{ attr(attrs) }}>
+	{% block main %}
+		{{ text }}
+	{% endblock %}
+</{{ tag }}>
