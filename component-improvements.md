@@ -160,9 +160,9 @@ It also provides more clarity and a little separation between data and markup.
 
 ## Improvement #4: Make your include an embed, if needed.
 
-Right before launch, the client request a new card layout that re-uses everything except the heading style?
+Right before launch, the client request a one-off new card layout that re-uses the card styling, but has different contents.
 
-Easily use your include as an embed where needed.
+Instead of duplicating the card component and changing the contents, you can use your include as an embed where needed.
 
 ```
 {# _news/index.twig #}
@@ -172,14 +172,9 @@ Easily use your include as an embed where needed.
     limit: 10,
 }).all() %}
     <div>
-        {% embed "_components/_card" with {
-            image: entry.listingImage.one(),
-            description: entry.description,
-        } only %}
-            {% block heading %}
-                {% include "_components/_special-hdg" with {
-                    text: entry.title,
-                } only %}
+        {% embed "_components/_card" only %}
+            {% block main %}
+                One-off card content goes here.
             {% endblock %}
         {% endembed %}
     </div>
@@ -194,12 +189,12 @@ Easily use your include as an embed where needed.
 {% set description = description ?? null %}
 
 <div>
-    {% if image %}
-        <img src="{{ asset.image }}" alt="">
-    {% endif %}
-    {% block heading %}
+    {% block main %}
+        {% if image %}
+            <img src="{{ asset.image }}" alt="">
+        {% endif %}
         <h3>{{ heading }}</h3>
+        {{ description }}
     {% endblock %}
-    {{ description }}
 </div>
 ```

@@ -91,7 +91,7 @@ TODO: Tim
 
 TODO: Tim
 
-## Tip #10: Set default component attr and override with passed attrs.
+## Tip #10: Set default component attrs and override with passed attrs.
 
 ```
 {% include "_components/_forms/_button" with {
