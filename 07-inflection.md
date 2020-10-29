@@ -1,5 +1,7 @@
 # Inflection
 
+<!-- {% raw %} -->
+
 ```twig
 {% set inflector = create('craft\\helpers\\Inflector') %}
 {% set cacti = inflector.pluralize('cactus') %}
@@ -10,3 +12,5 @@
 {{ "I love the #{inflector.ordinalize(totalCacti)} #{cactus}." }}
 {{ "I love the #{totalCacti > 1 ? cacti : cactus }." }}
 ```
+
+<!-- {% endraw %}) -->

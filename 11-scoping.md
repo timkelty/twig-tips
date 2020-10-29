@@ -4,15 +4,21 @@
 
 ![](resources/nope.jpg)
 
+<!-- {% raw %} -->
+
 ```twig
 {% if entry.assetsField.exists %}
   <img src="{{ entry.assetsField.one().url }}" alt="">
 {% endif %}
 ```
 
+<!-- {% endraw %}) -->
+
 ## Yep!
 
 ![](resources/yep.jpg)
+
+<!-- {% raw %} -->
 
 ```twig
 {% for asset in entry.assetsField.limit(1).all() %}
@@ -20,9 +26,13 @@
 {% endfor %}
 ```
 
+<!-- {% endraw %}) -->
+
 ## Nope…
 
 ![](resources/nope.jpg)
+
+<!-- {% raw %} -->
 
 ```twig
   {% set featuredImgSrc = 'resources/nope.jpg' %}
@@ -30,9 +40,14 @@
   <img src="{{ featuredImgSrc }}" alt="{{ featuredImgAlt }}">
 ```
 
+<!-- {% endraw %}) -->
+
 ## Yep!
 
 ![](resources/yep.jpg)
+
+<!-- {% raw %} -->
+
 ```twig
 {% with {
   src: 'resources/yep.jpg',
@@ -41,3 +56,5 @@
   <img src="{{ src }}" alt="{{ alt }}">
 {% endwith %}
 ```
+
+<!-- {% endraw %}) -->

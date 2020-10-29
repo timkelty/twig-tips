@@ -4,6 +4,8 @@
 
 ![](resources/nope.jpg)
 
+<!-- {% raw %} -->
+
 ```twig
 {% set youngest = 0 %}
 
@@ -18,9 +20,13 @@ Over 21:
 Youngest: {{ youngest }}
 ```
 
+<!-- {% endraw %}) -->
+
 ## #nailedit
 
 ![](resources/yep.jpg)
+
+<!-- {% raw %} -->
 
 ```twig
 {% set over21 = craft.entries.all()|filter(e => e.firstName && entry.age > 21) %}
@@ -29,3 +35,5 @@ Youngest: {{ youngest }}
 Over 21: {{ over21|map(e => e.firstName)|join(',') }}
 Youngest: {{ ages|min }}
 ```
+
+<!-- {% endraw %}) -->

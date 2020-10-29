@@ -1,6 +1,8 @@
 # UUID for when your component needs a unique ID.
 
-```
+<!-- {% raw %} -->
+
+```twig
 {% set uuid = create('craft\\helpers\\StringHelper').UUID() %}
 
 <div class="tabs">
@@ -15,3 +17,5 @@
     {% endfor %}
 </div>
 ```
+
+<!-- {% endraw %}) -->

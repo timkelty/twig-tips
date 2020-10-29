@@ -1,5 +1,7 @@
 # Set default component attr and override with passed attrs.
 
+<!-- {% raw %} -->
+
 ```twig
 {% include "_components/forms/button" with {
     text: "Submit",
@@ -20,3 +22,5 @@
     <button {{ attr(attrs) }}>{{ text }}</button>
 {% endif %}
 ```
+
+<!-- {% endraw %}) -->

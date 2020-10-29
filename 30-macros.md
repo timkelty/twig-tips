@@ -3,6 +3,8 @@
 Includes and embeds are almost always a better choice.
 One exception is macros using `_self` for micro-templates that aren't worth an separate file:
 
+<!-- {% raw %} -->
+
 ```twig
 {% set data = [
   {
@@ -38,3 +40,5 @@ One exception is macros using `_self` for micro-templates that aren't worth an s
   </tbody>
 </table>
 ```
+
+<!-- {% endraw %}) -->

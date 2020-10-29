@@ -8,6 +8,8 @@ https://tailwindcss.com/docs/extracting-components#extracting-html-components
 
 ![](resources/nope.jpg)
 
+<!-- {% raw %} -->
+
 ```twig
 {# _news/index.twig #}
 
@@ -27,3 +29,5 @@ https://tailwindcss.com/docs/extracting-components#extracting-html-components
     </div>
 {% endfor %}
 ```
+
+<!-- {% endraw %}) -->

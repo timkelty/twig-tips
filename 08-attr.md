@@ -4,6 +4,8 @@
 
 ![](resources/nope.jpg)
 
+<!-- {% raw %} -->
+
 ```twig
 {% set tag = link ? 'a' : 'div' %}
 
@@ -15,9 +17,13 @@
 </{{ tag }}>
 ```
 
+<!-- {% endraw %}) -->
+
 ## Getting better…
 
 ![](resources/yep.jpg)
+
+<!-- {% raw %} -->
 
 ```twig
 {% set link = link ?? null %}
@@ -39,9 +45,13 @@
 </{{ tag }}>
 ```
 
+<!-- {% endraw %}) -->
+
 ## Final answer 💯
 
 ![](resources/clap.gif)
+
+<!-- {% raw %} -->
 
 ```twig
 {% set link = link ?? null %}
@@ -60,3 +70,5 @@
   text: 'Drake wants your number',
 })}}
 ```
+
+<!-- {% endraw %}) -->
