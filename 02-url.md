@@ -2,7 +2,7 @@
 
 Yes, ALWAYS.
 
-https://craftcms.com/docs/3.x/dev/functions.html#url
+[https://craftcms.com/docs/3.x/dev/functions.html#url](https://craftcms.com/docs/3.x/dev/functions.html#url)
 
 ## Nope…
 

@@ -2,7 +2,7 @@
 
 ## With SEOMatic
 
-https://nystudio107.com/docs/seomatic/Using.html#helper-functions-seomatic-helper
+[https://nystudio107.com/docs/seomatic/Using.html#helper-functions-seomatic-helper](https://nystudio107.com/docs/seomatic/Using.html#helper-functions-seomatic-helper)
 
 <!-- {% raw %} -->
 
