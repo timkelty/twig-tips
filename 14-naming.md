@@ -12,6 +12,10 @@ Examples:
 - **Maybe…**: `components/_cards/basic.twig`
 - **Yep!**: `_components/cards/basic.twig`
 
+- **Nope…**: `events/detail.twig`
+- **Yep!**: `events/_detail.twig`
+- **Yep!**: `events/_types/detail.twig`
+
 ## Block naming
 
 - Stick to one convention for blocks, e.g. `main`.

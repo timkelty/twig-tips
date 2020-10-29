@@ -1,7 +1,5 @@
 # Use arrow functions in Twig.
 
-- Rob - sfc heading component?
-
 ## Nope…
 
 ![](resources/nope.jpg)
