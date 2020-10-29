@@ -6,6 +6,7 @@ https://nystudio107.com/docs/seomatic/Using.html#helper-functions-seomatic-helpe
 
 ```twig
 {% set excerpt = seomatic.helper.truncateOnWord(entry.richText, 180) %}
+
 {% set matrixText = seomatic.helper.extractTextFromField(entry.contentMatrix) %}
 {% set excerpt = seomatic.helper.truncateOnWord(matrixText, 180) %}
 ```
