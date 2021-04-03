@@ -29,7 +29,7 @@ Youngest: {{ youngest }}
 <!-- {% raw %} -->
 
 ```twig
-{% set over21 = craft.entries.all()|filter(e => e.firstName && entry.age > 21) %}
+{% set over21 = craft.entries.all()|filter(e => e.firstName and entry.age > 21) %}
 {% set ages = over21|reduce((curr, prev) => prev|merge(curr.age), []) %}
 
 Over 21: {{ over21|map(e => e.firstName)|join(',') }}
