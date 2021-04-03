@@ -31,8 +31,8 @@ class AppModule extends \yii\base\Module
 <!-- {% raw %} -->
 
 ```twig
-{{ craft.modules.appmodule.inflector.pluralize('cactus') }}
-{{ craft.modules.appmodule.url.rootRelativeUrl('https://site.com/foo') }}
+{{ craft.app.modules.appmodule.inflector.pluralize('cactus') }}
+{{ craft.app.modules.appmodule.url.rootRelativeUrl('https://site.com/foo') }}
 ```
 
 <!-- {% endraw %}) -->
